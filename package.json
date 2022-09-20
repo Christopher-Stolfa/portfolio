@@ -8,11 +8,6 @@
   "license": "MIT",
   "start": "webpack  --host 0.0.0.0 --config ./webpack.config.js --mode development",
   "test": "echo \"Error: no test specified\" && exit 1",
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
