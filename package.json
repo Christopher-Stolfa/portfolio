@@ -7,10 +7,10 @@
   "author": "Chribtoper <xcstolfax@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "docs": "jsdoc -c jsdoc.conf.json"
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "start": "webpack  --host 0.0.0.0 --config ./webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "start": "webpack  --host 0.0.0.0 --config ./webpack.config.js --mode development",
-  "test": "echo \"Error: no test specified\" && exit 1",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
