@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -36,5 +37,6 @@ module.exports = {
       title: "Christopher Stolfa's Portfolio",
       template: path.resolve(__dirname, './src/index.html'),
     }),
+    new CleanWebpackPlugin(),
   ],
 };
