@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "docs": "jsdoc -c jsdoc.conf.json",
-    "start": "webpack --host 0.0.0.0 --config ./webpack.config.js --mode development",
+    "start": "webpack serve --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
