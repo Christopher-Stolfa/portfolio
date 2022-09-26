@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -28,5 +29,12 @@ module.exports = {
     static: path.resolve(__dirname, './dist'),
     hot: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new ESLintPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ESLintPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Christopher Stolfa's Portfolio",
+      template: path.resolve(__dirname, './src/index.html'),
+    }),
+  ],
 };
