@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
-  devtool: 'source-map',
+  entry: path.resolve(__dirname, '..', './src/index.js'),
   module: {
     rules: [
       {
@@ -24,11 +23,11 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '..', './dist'),
     filename: 'bundle.js',
   },
   devServer: {
-    static: path.resolve(__dirname, './dist'),
+    static: path.resolve(__dirname, '..', './dist'),
     hot: true,
   },
   plugins: [
@@ -36,7 +35,7 @@ module.exports = {
     new ESLintPlugin(),
     new HtmlWebpackPlugin({
       title: "Christopher Stolfa's Portfolio",
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '..', './src/index.html'),
     }),
     new CleanWebpackPlugin(),
   ],
