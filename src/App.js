@@ -11,10 +11,8 @@ const App = () => (
     <ChakraProvider>
       <header>The Header</header>
       <main>
-        <div>
-          <h1>Hello world</h1>
-          <p>Have a wonderful day</p>
-        </div>
+        <h1>Hello world</h1>
+        <p>Have a wonderful day</p>
       </main>
       <footer>The Footer</footer>
     </ChakraProvider>
