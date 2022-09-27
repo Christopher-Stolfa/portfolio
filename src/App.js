@@ -2,7 +2,6 @@ import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 /**
  * This is the root React component.
- * All
  *
  * @component
  */
