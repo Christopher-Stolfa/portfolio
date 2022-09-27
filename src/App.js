@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * This is the root React component, it gets rendered by ReactDOM.
  * All
@@ -7,14 +8,14 @@
 
 const App = () => (
   <>
-    <header>Header</header>
+    <header>The Header</header>
     <main>
       <div>
         <h1>Hello world</h1>
         <p>Have a wonderful day</p>
       </div>
     </main>
-    <footer>Footer</footer>
+    <footer>The Footer</footer>
   </>
 );
 
