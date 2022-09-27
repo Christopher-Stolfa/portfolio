@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 /**
  * This is the root React component, it gets rendered by ReactDOM.
  * All
@@ -7,7 +8,7 @@ import React from 'react';
  */
 
 const App = () => (
-  <>
+  <ChakraProvider>
     <header>The Header</header>
     <main>
       <div>
@@ -16,7 +17,7 @@ const App = () => (
       </div>
     </main>
     <footer>The Footer</footer>
-  </>
+  </ChakraProvider>
 );
 
 export default App;
