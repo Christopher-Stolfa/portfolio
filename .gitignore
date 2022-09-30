@@ -107,3 +107,6 @@ dist
 
 # DS_Store
 *.DS_Store
+
+# Storybook Static Build
+storybook-static
