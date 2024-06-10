@@ -14,10 +14,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   white-space: nowrap;
-  a {
-    color: $primary-color;
-    &:hover {
-      color: $accent-color-1;
-    }
+
+  .router-link-active {
+    color: $accent-color-2;
   }
 }

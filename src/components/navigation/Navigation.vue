@@ -1,6 +1,6 @@
 <template>
   <nav :class="$styles.root">
-    <router-link to="/">Home</router-link>
+    <router-link to="/" exact>Home</router-link>
     <router-link to="/work">Work</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/contact">Contact</router-link>

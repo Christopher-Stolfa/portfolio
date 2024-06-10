@@ -165,6 +165,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+nav {
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $accent-color-1;
+    }
+  }
+}
+
 .card {
   padding: 2em;
 }
@@ -177,6 +186,10 @@ button:focus-visible {
 
 #container {
   max-width: 1280px;
+}
+
+.router-link-active {
+  color: $accent-color-2;
 }
 
 @media (prefers-color-scheme: light) {
