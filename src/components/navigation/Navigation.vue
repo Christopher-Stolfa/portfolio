@@ -5,7 +5,9 @@
     <router-link to="/about">About</router-link>
     <router-link to="/contact">Contact</router-link>
   </nav>
-  <router-view></router-view>
+  <div :class="$styles.container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts">

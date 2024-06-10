@@ -1,6 +1,7 @@
 <template>
   <div :class="$styles.root">
-    <h1>Portfolio</h1>
+    <h1>Hi, I am Chris</h1>
+    <p>Software Developer</p>
   </div>
 </template>
 
