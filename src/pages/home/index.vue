@@ -1,7 +1,9 @@
 <template>
   <div :class="$styles.root">
     <h1>Hi, I am Chris</h1>
-    <p>Software Developer</p>
+    <div :class="$styles.roleContainer">
+      <span :class="$styles.role">Full Stack Developer</span>
+    </div>
   </div>
 </template>
 

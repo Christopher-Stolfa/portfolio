@@ -1,2 +1,11 @@
 .root {
 }
+.role {
+  @include typing-effect(3s, 1s);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: $accent-color-1;
+}
+.role-container {
+  width: fit-content;
+}
