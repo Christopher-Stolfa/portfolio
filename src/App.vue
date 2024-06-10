@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Home from './pages/home/index.vue';
+import Navigation from './components/Navigation/Navigation.vue';
 </script>
 
 <template>
-  <Home msg="Portfolio" />
+  <Navigation />
 </template>

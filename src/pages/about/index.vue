@@ -1,6 +1,6 @@
 <template>
   <div :class="$styles.root">
-    <h1>Portfolio</h1>
+    <h1>About</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import styles from './styles.module.scss';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'About',
   props: {
     type: String,
   },
