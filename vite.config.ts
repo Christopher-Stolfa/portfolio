@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { fileURLToPath, URL } from 'url';
+import { fileURLToPath } from 'url';
 import path from 'path';
 
 // Convert import.meta.url to a file path
@@ -26,7 +26,7 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/variables";`,
+        additionalData: `@import "@/styles/_variables";`,
       },
     },
   },
