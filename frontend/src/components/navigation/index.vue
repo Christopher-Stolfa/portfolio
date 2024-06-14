@@ -1,6 +1,5 @@
 <template>
   <nav class="root">
-    <span class="carets">< /></span>
     <router-link to="/" exact>Home</router-link>
     <router-link to="/work">Work</router-link>
     <router-link to="/about">About</router-link>
@@ -19,10 +18,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.carets {
-  color: $accent-color-2;
-  margin-right: auto;
-}
 .root {
   display: flex;
   flex-direction: row;
