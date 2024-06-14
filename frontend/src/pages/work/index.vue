@@ -1,5 +1,5 @@
 <template>
-  <div :class="$styles.root">
+  <div>
     <h1>Work</h1>
   </div>
 </template>
