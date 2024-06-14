@@ -1,6 +1,6 @@
 <template>
   <div :class="$styles.root">
-    <h1>Hi, I am Chris</h1>
+    <h1>Hi, I'm Chris</h1>
     <div :class="$styles.roleContainer">
       <span :class="$styles.role">Full Stack Developer</span>
     </div>
