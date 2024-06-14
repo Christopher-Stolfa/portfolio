@@ -1,0 +1,48 @@
+<template>
+  <nav class="root">
+    <router-link to="/" exact>Home</router-link>
+    <router-link to="/work">Work</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/contact">Contact</router-link>
+  </nav>
+  <div class="container">
+    <router-view></router-view>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Navigation',
+});
+</script>
+
+<style lang="scss" scoped>
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  padding: 0 10% 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  white-space: nowrap;
+
+  .router-link-active {
+    color: $accent-color-2;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+</style>
