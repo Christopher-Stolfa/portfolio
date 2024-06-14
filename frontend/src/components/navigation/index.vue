@@ -5,7 +5,7 @@
     <router-link to="/about">About</router-link>
     <router-link to="/contact">Contact</router-link>
   </nav>
-  <div class="container">
+  <div class="page-container">
     <router-view></router-view>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default defineComponent({
   white-space: nowrap;
 }
 
-.container {
+.page-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 4rem;
