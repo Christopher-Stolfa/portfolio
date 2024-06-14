@@ -1,4 +1,3 @@
-// Mixins
 @mixin center {
   display: flex;
   justify-content: center;
@@ -9,10 +8,10 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid;
+  border-right: 3px solid $primary-color;
   animation-fill-mode: forwards;
-  animation: typing $duration steps(40, end) $delay forwards,
-    blink-caret 0.75s step-end infinite $delay;
+
+  animation: typing $duration steps(40, end) $delay forwards, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
