@@ -1,25 +1,28 @@
 <template>
-  <div :class="$styles.root">
+  <div>
     <h1>Hi, I'm Chris</h1>
-    <div :class="$styles.roleContainer">
-      <span :class="$styles.role">Full Stack Developer</span>
+    <div class="role-container">
+      <span class="role">Full Stack Developer</span>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import styles from './styles.module.scss';
 
 export default defineComponent({
   name: 'Home',
-  props: {
-    type: String,
-  },
-  computed: {
-    $styles() {
-      return styles;
-    },
-  },
 });
 </script>
+
+<style lang="scss" scoped>
+.role {
+  @include typing-effect(2s);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: $accent-color-1;
+}
+.role-container {
+  width: fit-content;
+}
+</style>
