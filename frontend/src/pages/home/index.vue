@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <h1>Hi, I'm Chris</h1>
-    <div class="role-container">
-      <span class="role">Full Stack Developer</span>
-    </div>
+  <h1>Hi, I'm Chris</h1>
+  <div class="role-container">
+    <span class="role">Full Stack Developer</span>
   </div>
 </template>
 
