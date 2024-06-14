@@ -1,6 +1,6 @@
 import { IContactFormData } from './types';
 
-export const submitForm = async (form: IContactFormData): Promise<{ success: boolean }> => {
+export async function submitForm(form: IContactFormData): Promise<{ success: boolean }> {
   try {
     const response = await fetch('/api/contact', {
       method: 'POST',
@@ -9,6 +9,7 @@ export const submitForm = async (form: IContactFormData): Promise<{ success: boo
       },
       body: JSON.stringify(form),
     });
+
     if (response.ok) {
       alert('Message sent successfully!');
       return { success: true };
@@ -20,4 +21,4 @@ export const submitForm = async (form: IContactFormData): Promise<{ success: boo
     alert('An error occurred. Please try again.');
     return { success: false };
   }
-};
+}
