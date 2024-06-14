@@ -30,7 +30,7 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 4rem;
-  padding: 0 10% 0 4rem;
+  padding: 0 10% 0 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   white-space: nowrap;
