@@ -1,5 +1,5 @@
 <template>
-  <nav class="root">
+  <nav :class="{ scrolled: isScrolled }" class="navbar">
     <router-link to="/" exact>Home</router-link>
     <router-link to="/work">Work</router-link>
     <router-link to="/about">About</router-link>
@@ -14,11 +14,28 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'Navigation',
+  data() {
+    return {
+      isScrolled: false,
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+    },
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-.root {
+.navbar {
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -31,14 +48,22 @@ export default defineComponent({
   width: 100%;
   height: 4rem;
   padding: 0 10% 0 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   white-space: nowrap;
+  z-index: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .page-container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 4rem;
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+  }
 }
 </style>
