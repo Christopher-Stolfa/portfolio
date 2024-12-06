@@ -6,10 +6,29 @@
     </div>
     <div class="content">
       <img class="avatar" src="@/assets/webp/avatar.webp" />
-      <p class="blurb" id="blurb">
-        I enjoy creating websites that are both beautiful and functional. My focus is on building
-        responsive and accessible sites that work well for everyone.
-      </p>
+      <div>
+        <p class="blurb">
+          I enjoy creating visually appealing applications that are responsive and accessible for
+          everyone.
+        </p>
+        <p class="blurb">
+          This includes building APIs and managing backend systems to ensure everything runs
+          smoothly and efficiently.
+        </p>
+        <ul class="social-list">
+          <li>
+            <a class="github" :href="github.href" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon :icon="github.icon" />
+            </a>
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </li>
+          <li>
+            <a class="linkedIn" :href="linkedIn.href" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon :icon="linkedIn.icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +36,8 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { applyTypingEffect } from '@/utilities/text/applyTypingEffect';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default defineComponent({
   name: 'Home',
@@ -25,6 +46,18 @@ export default defineComponent({
       await applyTypingEffect('introduction', `Hi, I'm Chris`, 30);
       await applyTypingEffect('profession', 'Full Stack Developer', 30);
     });
+  },
+  data() {
+    return {
+      linkedIn: {
+        href: 'https://www.linkedin.com/in/christopher-stolfa-49a4a0178',
+        icon: faLinkedin,
+      },
+      github: {
+        href: 'https://github.com/Christopher-Stolfa',
+        icon: faGithub,
+      },
+    };
   },
 });
 </script>
@@ -50,10 +83,6 @@ export default defineComponent({
     font-size: 1.125rem;
   }
 }
-.blurb,
-.avatar {
-  @include fade-in(2s, 0.5s);
-}
 .avatar {
   display: block;
   height: 20rem;
@@ -67,6 +96,30 @@ export default defineComponent({
   gap: 2rem;
   @media (max-width: 800px) {
     flex-direction: column-reverse;
+  }
+  @include fade-in(2s, 0.5s);
+}
+.social-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  .github {
+    color: #333;
+  }
+  .linkedIn {
+    color: #0073b1;
+  }
+  font-awesome-icon {
+    height: 4rem;
+    width: 4rem;
   }
 }
 </style>

@@ -149,7 +149,7 @@ h1 {
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 nav {
@@ -166,6 +166,7 @@ textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  border: 1px solid #ccc;
 }
 
 img,
@@ -200,16 +201,9 @@ button {
     color: #213547;
     background-color: #ffffff;
   }
-
   a:hover {
     color: $accent-color-2;
   }
-
-  input,
-  textarea {
-    border: 1px solid #ccc;
-  }
-
   button {
     background-color: $accent-color-2;
     color: #fff;
