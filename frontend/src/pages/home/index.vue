@@ -18,13 +18,12 @@
         <ul class="social-list">
           <li>
             <a class="github" :href="github.href" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon :icon="github.icon" />
+              <font-awesome-icon :icon="github.icon" />
             </a>
-            <font-awesome-icon :icon="['fab', 'github']" />
           </li>
           <li>
             <a class="linkedIn" :href="linkedIn.href" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon :icon="linkedIn.icon" />
+              <font-awesome-icon :icon="linkedIn.icon" />
             </a>
           </li>
         </ul>
@@ -36,8 +35,6 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { applyTypingEffect } from '@/utilities/text/applyTypingEffect';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default defineComponent({
   name: 'Home',
@@ -51,11 +48,11 @@ export default defineComponent({
     return {
       linkedIn: {
         href: 'https://www.linkedin.com/in/christopher-stolfa-49a4a0178',
-        icon: faLinkedin,
+        icon: ['fab', 'linkedin'],
       },
       github: {
         href: 'https://github.com/Christopher-Stolfa',
-        icon: faGithub,
+        icon: ['fab', 'github'],
       },
     };
   },
@@ -112,9 +109,11 @@ export default defineComponent({
     color: inherit;
   }
   .github {
+    font-size: 2.25rem;
     color: #333;
   }
   .linkedIn {
+    font-size: 2.25rem;
     color: #0073b1;
   }
   font-awesome-icon {

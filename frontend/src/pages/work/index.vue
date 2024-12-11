@@ -17,8 +17,49 @@
           </p>
         </div>
         <div class="card-footer">
-          <p>Technology Used</p>
-          <a href="https://ssa.ccny.cuny.edu/" target="_blank" rel="noopener noreferrer">Link</a>
+          <div class="icon-list">
+            <span>Technologies: </span>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#3178C6"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="TypeScript Logo">
+              <path :d="typescriptIconPath" />
+            </svg>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#61DAFB"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="React.js Logo">
+              <path :d="reactIconPath" />
+            </svg>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#777BB4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Php logo">
+              <path :d="phpIconPath" />
+            </svg>
+            <font-awesome-icon class="wordpress-icon" :icon="['fab', 'fa-wordpress-simple']" />
+          </div>
+          <a
+            class="website-link"
+            href="https://ssa.ccny.cuny.edu/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <font-awesome-icon
+              class="fontawesome-icon"
+              :icon="['fas', 'arrow-up-right-from-square']" />
+          </a>
         </div>
       </div>
       <div class="card">
@@ -35,9 +76,47 @@
           </p>
         </div>
         <div class="card-footer">
-          <p>Technology Used</p>
-          <a href="https://bertdrobbincompany.com/" target="_blank" rel="noopener noreferrer">
-            Link
+          <div class="icon-list">
+            <span>Technologies: </span>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#D32F2F"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Firebase Logo">
+              <path :d="firebaseIconPath" />
+            </svg>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#61DAFB"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="React.js Logo">
+              <path :d="reactIconPath" />
+            </svg>
+            <svg
+              height="1.5rem"
+              width="1.5rem"
+              color="#3178C6"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="JavaScript Logo">
+              <path :d="javascriptIconPath" />
+            </svg>
+          </div>
+          <a
+            class="website-link"
+            href="https://bertdrobbincompany.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <font-awesome-icon
+              class="fontawesome-icon"
+              :icon="['fas', 'arrow-up-right-from-square']" />
           </a>
         </div>
       </div>
@@ -47,9 +126,27 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { siFirebase, siTypescript, siJavascript, siReact, siPhp } from 'simple-icons/icons';
 
 export default defineComponent({
   name: 'Work',
+  computed: {
+    firebaseIconPath(): string {
+      return siFirebase.path;
+    },
+    typescriptIconPath(): string {
+      return siTypescript.path;
+    },
+    javascriptIconPath(): string {
+      return siJavascript.path;
+    },
+    reactIconPath(): string {
+      return siReact.path;
+    },
+    phpIconPath(): string {
+      return siPhp.path;
+    },
+  },
 });
 </script>
 
@@ -88,8 +185,6 @@ export default defineComponent({
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  @media (max-width: 1024px) {
-  }
 }
 .card-body {
   flex: 1;
@@ -103,5 +198,22 @@ export default defineComponent({
   flex-direction: column;
   padding: 1rem;
   background-color: #f5f5f5;
+}
+.website-link {
+  width: fit-content;
+}
+.wordpress-icon {
+  color: #21759b;
+}
+.wordpress-icon,
+.fontawesome-icon {
+  font-size: 1.5rem;
+}
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 </style>
