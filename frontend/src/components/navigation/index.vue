@@ -1,10 +1,4 @@
 <template>
-  <nav :class="{ scrolled: isScrolled }" class="navbar">
-    <router-link to="/" exact>Home</router-link>
-    <router-link to="/work">Work</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/contact">Contact</router-link>
-  </nav>
   <div class="page-container">
     <router-view></router-view>
   </div>
@@ -59,6 +53,9 @@ export default defineComponent({
 }
 
 .page-container {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-type: y mandatory;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 4rem;
