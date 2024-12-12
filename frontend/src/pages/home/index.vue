@@ -54,9 +54,8 @@
           >
           <p>
             The Bernard and Anne Spitzer School of Architecture is a renowned institution offering
-            innovative architectural education within the City College of New York. I lead efforts
-            to design and rebuild the school&apos;s landing page, enhancing its visual identity,
-            user experience, and accessibility.
+            innovative architectural education within the City College of New York. I worked with an
+            awesome UI designer, Alfonso, to rebuild the landing page and make it beautiful.
           </p>
         </div>
         <div class="card-footer">
@@ -126,10 +125,10 @@
             ><h3>Bert Drobbin Company</h3></a
           >
           <p>
-            The Bert Drobbin Company supplies essential goods, clothing, footwear, home furnishings,
-            and appliances to youth facilities, shelters, and other social service programs across
-            the tri-state area. I rebuilt their website, providing a digital catalog, a platform for
-            inquiry-based sales, and a CMS for staff to easily manage their products.
+            Bert Drobbin Company provides essential goods, clothing, and appliances to youth
+            facilities, shelters, and social service programs across the tri-state area. This was
+            one of my earliest projects. It serves informational website with a digital catalog to
+            support inquiry-based sales.
           </p>
         </div>
         <div class="card-footer">
