@@ -94,7 +94,8 @@
       </div>
       <div>
         <p class="blurb">
-          I am a Software Developer based in Phoenix and currently working on the development of
+          I am a software engineer with 6 years of experience based in Phoenix and currently working
+          on the development of
           <b>Q™</b>
           ,
           <a
