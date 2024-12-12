@@ -5,28 +5,85 @@
       <span class="profession" id="profession"></span>
     </div>
     <div class="content">
-      <img class="avatar" src="@/assets/webp/avatar.webp" />
+      <div>
+        <img class="avatar" src="@/assets/webp/avatar.webp" />
+        <p class="blurb">
+          <small>Tools for the job</small>
+          <div class="tech-list">
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#3178C6"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="TypeScript Logo">
+                <path :d="typescriptIconPath" />
+              </svg>
+              <span class="tooltiptext">TypeScript</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#3178C6"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="JavaScript Logo">
+                <path :d="javascriptIconPath" />
+              </svg>
+              <span class="tooltiptext">JavaScript</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#61DAFB"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="React.js Logo">
+                <path :d="reactIconPath" />
+              </svg>
+              <span class="tooltiptext">React.js</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#5FA04E"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Node.js Logo">
+                <path :d="nodeIconPath" />
+              </svg>
+              <span class="tooltiptext">Node.js</span>
+            </div>
+            
+          </div>
+        </p>
+      </div>
+
       <div>
         <p class="blurb">
-          I am a Software Developer based in Phoenix, Arizona, currently working for Omnicom Sparks
-          & Honey on the development of their
+          I am a Software Developer based in Phoenix and currently working on the development of
+          <b>Q™</b>
+          ,
           <a
             href="https://www.sparksandhoney.com/qplatform"
             target="_blank"
             rel="noopener noreferrer"
-            >Q™ SaaS</a
+            ><span class="sparks-pink">s&h&apos;s</span></a
           >
           cultural intelligence platform.
         </p>
         <p class="blurb">
-          I am adept in rapidly prototyping visually appealing, responsive user interfaces and
-          collaborating effectively with cross-functional teams.
-        </p>
-        <p class="blurb">
-          My primary technical skills include TypeScript, JavaScript, React.js, HTML, CSS, Node.js,
-          Python, SQL, prompt engineering, and unit testing.
-        </p>
-        <ul class="social-list">
+          Some of my interests include exploring ways to utilize LLMs in areas such as cuisine and music.
+          When I'm outside of the matrix, I love cooking Italian recipes and playing drums.</p>
+          <ul class="social-list">
           <li>
             <a class="github" :href="github.href" target="_blank" rel="noopener noreferrer">
               <font-awesome-icon :icon="github.icon" />
@@ -126,8 +183,7 @@
           >
           <p>
             Bert Drobbin Company provides essential goods, clothing, and appliances to youth
-            facilities, shelters, and social service programs across the tri-state area. This was
-            one of my earliest projects. It serves informational website with a digital catalog to
+            facilities, shelters, and social service programs across the tri-state area. I created a business website with a digital catalog to
             support inquiry-based sales.
           </p>
         </div>
@@ -187,12 +243,15 @@
       </div>
     </div>
   </div>
+  <div>
+    © 2024
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { applyTypingEffect } from '@/utilities/text/applyTypingEffect';
-import { siFirebase, siTypescript, siJavascript, siReact, siPhp } from 'simple-icons/icons';
+import { siFirebase, siTypescript, siJavascript, siReact, siPhp, siNodedotjs, siMysq } from 'simple-icons/icons';
 
 export default defineComponent({
   name: 'Home',
@@ -212,6 +271,9 @@ export default defineComponent({
     phpIconPath(): string {
       return siPhp.path;
     },
+    nodeIconPath():string {
+      return siNodedotjs.path;
+    }
   },
   setup() {
     onMounted(async () => {
@@ -377,6 +439,11 @@ export default defineComponent({
 .fontawesome-icon {
   font-size: 1.5rem;
 }
+.tech-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
 .icon-list {
   display: flex;
   flex-direction: row;
@@ -405,5 +472,8 @@ export default defineComponent({
 .tooltip:hover .tooltiptext {
   visibility: visible;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sparks-pink {
+  color: $sparks-pink;
 }
 </style>
