@@ -98,10 +98,7 @@
           on the development of
           <b>Q™</b>
           ,
-          <a
-            href="https://www.sparksandhoney.com/qplatform"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://www.sparksandhoney.com/" target="_blank" rel="noopener noreferrer"
             ><span class="sparks-pink">s&h&apos;s</span></a
           >
           cultural intelligence platform. I build clean user-friendly applications that focus on
