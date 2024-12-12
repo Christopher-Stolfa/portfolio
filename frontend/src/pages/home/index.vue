@@ -1,19 +1,20 @@
 <template>
+  <div class="madvillain-square-top"></div>
   <div class="section">
     <span id="introduction" class="introduction"></span>
     <div class="profession-container">
       <span class="profession" id="profession"></span>
     </div>
     <div class="content">
-      <div>
+      <div class="avatar-container">
         <img class="avatar" src="@/assets/webp/avatar.webp" />
-        <p class="blurb">
-          <small>Tools for the job</small>
+        <div class="technologies">
+          <span>Tech Stacks</span>
           <div class="tech-list">
             <div class="tooltip">
               <svg
-                height="1.5rem"
-                width="1.5rem"
+                height="1.75rem"
+                width="1.75rem"
                 color="#3178C6"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -25,8 +26,8 @@
             </div>
             <div class="tooltip">
               <svg
-                height="1.5rem"
-                width="1.5rem"
+                height="1.75rem"
+                width="1.75rem"
                 color="#3178C6"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -38,8 +39,8 @@
             </div>
             <div class="tooltip">
               <svg
-                height="1.5rem"
-                width="1.5rem"
+                height="1.75rem"
+                width="1.75rem"
                 color="#61DAFB"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -51,8 +52,8 @@
             </div>
             <div class="tooltip">
               <svg
-                height="1.5rem"
-                width="1.5rem"
+                height="1.75rem"
+                width="1.75rem"
                 color="#5FA04E"
                 viewBox="0 0 24 24"
                 fill="currentColor"
@@ -62,11 +63,35 @@
               </svg>
               <span class="tooltiptext">Node.js</span>
             </div>
-            
+            <div class="tooltip">
+              <svg
+                height="1.75rem"
+                width="1.75rem"
+                color="#3776AB"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Python Logo">
+                <path :d="pythonIconPath" />
+              </svg>
+              <span class="tooltiptext">Python</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.75rem"
+                width="1.75rem"
+                color="#5FA04E"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="MySQL Logo">
+                <path :d="sqlIconPath" />
+              </svg>
+              <span class="tooltiptext">MySQL</span>
+            </div>
           </div>
-        </p>
+        </div>
       </div>
-
       <div>
         <p class="blurb">
           I am a Software Developer based in Phoenix and currently working on the development of
@@ -78,23 +103,13 @@
             rel="noopener noreferrer"
             ><span class="sparks-pink">s&h&apos;s</span></a
           >
-          cultural intelligence platform.
+          cultural intelligence platform. I build clean user-friendly applications that focus on
+          simplicity and functionality.
         </p>
         <p class="blurb">
-          Some of my interests include exploring ways to utilize LLMs in areas such as cuisine and music.
-          When I'm outside of the matrix, I love cooking Italian recipes and playing drums.</p>
-          <ul class="social-list">
-          <li>
-            <a class="github" :href="github.href" target="_blank" rel="noopener noreferrer">
-              <font-awesome-icon :icon="github.icon" />
-            </a>
-          </li>
-          <li>
-            <a class="linkedIn" :href="linkedIn.href" target="_blank" rel="noopener noreferrer">
-              <font-awesome-icon :icon="linkedIn.icon" />
-            </a>
-          </li>
-        </ul>
+          Some of my interests include exploring ways to utilize LLMs in areas such as cuisine and
+          music. When I'm not in the matrix, I love cooking Italian recipes and playing drums.
+        </p>
       </div>
     </div>
   </div>
@@ -183,8 +198,8 @@
           >
           <p>
             Bert Drobbin Company provides essential goods, clothing, and appliances to youth
-            facilities, shelters, and social service programs across the tri-state area. I created a business website with a digital catalog to
-            support inquiry-based sales.
+            facilities, shelters, and social service programs across the tri-state area. I created a
+            business website with a digital catalog to support inquiry-based sales.
           </p>
         </div>
         <div class="card-footer">
@@ -243,15 +258,35 @@
       </div>
     </div>
   </div>
-  <div>
-    © 2024
-  </div>
+  <ul class="social-list">
+    <li>
+      <a class="github" :href="github.href" target="_blank" rel="noopener noreferrer">
+        <font-awesome-icon :icon="github.icon" />
+      </a>
+    </li>
+    <li>
+      <a class="linkedIn" :href="linkedIn.href" target="_blank" rel="noopener noreferrer">
+        <font-awesome-icon :icon="linkedIn.icon" />
+      </a>
+    </li>
+  </ul>
+  <div class="madvillain-square-bottom"></div>
+  <div class="copyright">© 2024</div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { applyTypingEffect } from '@/utilities/text/applyTypingEffect';
-import { siFirebase, siTypescript, siJavascript, siReact, siPhp, siNodedotjs, siMysq } from 'simple-icons/icons';
+import {
+  siFirebase,
+  siTypescript,
+  siJavascript,
+  siReact,
+  siPhp,
+  siNodedotjs,
+  siMysql,
+  siPython,
+} from 'simple-icons/icons';
 
 export default defineComponent({
   name: 'Home',
@@ -271,9 +306,15 @@ export default defineComponent({
     phpIconPath(): string {
       return siPhp.path;
     },
-    nodeIconPath():string {
+    nodeIconPath(): string {
       return siNodedotjs.path;
-    }
+    },
+    sqlIconPath(): string {
+      return siMysql.path;
+    },
+    pythonIconPath(): string {
+      return siPython.path;
+    },
   },
   setup() {
     onMounted(async () => {
@@ -300,7 +341,9 @@ export default defineComponent({
 .section {
   scroll-snap-align: start;
   padding: 2rem 0 1rem 0;
-  border-bottom: 1px solid $primary-color;
+  &:first-child {
+    border-bottom: 1px solid $primary-color;
+  }
   @media (min-width: 1024px) {
     height: 100vh;
     padding: 3rem 0 2rem 0;
@@ -314,6 +357,28 @@ export default defineComponent({
   @media (max-width: 600px) {
     font-size: 2.4rem;
   }
+}
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.copyright {
+  text-align: center;
+  width: 100%;
+}
+.technologies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: $plaster;
+  color: $primary-color;
+  font-weight: 600;
+  width: fit-content;
+  border: 1.8px solid $secondary-color;
+  box-shadow: $primary-box-shadow;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 .profession {
   font-size: 3.2rem;
@@ -354,6 +419,8 @@ export default defineComponent({
 .social-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -364,11 +431,11 @@ export default defineComponent({
     color: inherit;
   }
   .github {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     color: #333;
   }
   .linkedIn {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     color: #0073b1;
   }
   font-awesome-icon {
@@ -393,7 +460,7 @@ export default defineComponent({
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $primary-box-shadow;
   overflow: hidden;
   min-height: 487px;
 }
@@ -427,7 +494,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: $plaster;
 }
 .website-link {
   width: fit-content;
@@ -471,9 +538,32 @@ export default defineComponent({
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $primary-box-shadow;
 }
 .sparks-pink {
   color: $sparks-pink;
+}
+.madvillain-square-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7rem;
+  height: 7rem;
+  background-color: $tertiary-color;
+  @media (max-width: 1024px) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.madvillain-square-bottom {
+  position: absolute;
+  left: 0;
+  width: 7rem;
+  height: 7rem;
+  background-color: $tertiary-color;
+  @media (max-width: 1024px) {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 </style>
