@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 id="introduction"></h1>
+  <div class="section">
+    <span id="introduction" class="introduction"></span>
     <div class="profession-container">
       <span class="profession" id="profession"></span>
     </div>
@@ -8,12 +8,23 @@
       <img class="avatar" src="@/assets/webp/avatar.webp" />
       <div>
         <p class="blurb">
-          I enjoy creating visually appealing applications that are responsive and accessible for
-          everyone.
+          I am a Software Developer based in Phoenix, Arizona, currently working for Omnicom Sparks
+          & Honey on the development of their
+          <a
+            href="https://www.sparksandhoney.com/qplatform"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Q™ SaaS</a
+          >
+          cultural intelligence platform.
         </p>
         <p class="blurb">
-          This includes building APIs and managing backend systems to ensure everything runs
-          smoothly and efficiently.
+          I am adept in rapidly prototyping visually appealing, responsive user interfaces and
+          collaborating effectively with cross-functional teams.
+        </p>
+        <p class="blurb">
+          My primary technical skills include TypeScript, JavaScript, React.js, HTML, CSS, Node.js,
+          Python, SQL, prompt engineering, and unit testing.
         </p>
         <ul class="social-list">
           <li>
@@ -30,18 +41,183 @@
       </div>
     </div>
   </div>
+  <div class="section">
+    <h1>My Work</h1>
+    <div class="grid">
+      <div class="card">
+        <div class="card-image">
+          <img alt="Logo" src="/ssa.png" />
+        </div>
+        <div class="card-body">
+          <a href="https://ssa.ccny.cuny.edu/" target="_blank" rel="noopener noreferrer"
+            ><h3>Spitzer School of Architecture</h3></a
+          >
+          <p>
+            The Bernard and Anne Spitzer School of Architecture is a renowned institution offering
+            innovative architectural education within the City College of New York. I lead efforts
+            to design and rebuild the school&apos;s landing page, enhancing its visual identity,
+            user experience, and accessibility.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="icon-list">
+            <span>Powered By </span>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#3178C6"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="TypeScript Logo">
+                <path :d="typescriptIconPath" />
+              </svg>
+              <span class="tooltiptext">TypeScript</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#61DAFB"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="React.js Logo">
+                <path :d="reactIconPath" />
+              </svg>
+              <span class="tooltiptext">React.js</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#777BB4"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Php logo">
+                <path :d="phpIconPath" />
+              </svg>
+              <span class="tooltiptext">Php</span>
+            </div>
+            <div class="tooltip">
+              <font-awesome-icon class="wordpress-icon" :icon="['fab', 'fa-wordpress-simple']" />
+              <span class="tooltiptext">Wordpress</span>
+            </div>
+          </div>
+          <a
+            class="website-link"
+            href="https://ssa.ccny.cuny.edu/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <font-awesome-icon
+              class="fontawesome-icon"
+              :icon="['fas', 'arrow-up-right-from-square']" />
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img alt="Logo" src="/bdc.png" />
+        </div>
+        <div class="card-body">
+          <a href="https://bertdrobbincompany.com/" target="_blank" rel="noopener noreferrer"
+            ><h3>Bert Drobbin Company</h3></a
+          >
+          <p>
+            The Bert Drobbin Company supplies essential goods, clothing, footwear, home furnishings,
+            and appliances to youth facilities, shelters, and other social service programs across
+            the tri-state area. I rebuilt their website, providing a digital catalog, a platform for
+            inquiry-based sales, and a CMS for staff to easily manage their products.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="icon-list">
+            <span>Powered By </span>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#D32F2F"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Firebase Logo">
+                <path :d="firebaseIconPath" />
+              </svg>
+              <span class="tooltiptext">Firebase</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#61DAFB"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="React.js Logo">
+                <path :d="reactIconPath" />
+              </svg>
+              <span class="tooltiptext">React.js</span>
+            </div>
+            <div class="tooltip">
+              <svg
+                height="1.5rem"
+                width="1.5rem"
+                color="#3178C6"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="JavaScript Logo">
+                <path :d="javascriptIconPath" />
+              </svg>
+              <span class="tooltiptext">JavaScript</span>
+            </div>
+          </div>
+          <a
+            class="website-link"
+            href="https://bertdrobbincompany.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <font-awesome-icon
+              class="fontawesome-icon"
+              :icon="['fas', 'arrow-up-right-from-square']" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { applyTypingEffect } from '@/utilities/text/applyTypingEffect';
+import { siFirebase, siTypescript, siJavascript, siReact, siPhp } from 'simple-icons/icons';
 
 export default defineComponent({
   name: 'Home',
+  computed: {
+    firebaseIconPath(): string {
+      return siFirebase.path;
+    },
+    typescriptIconPath(): string {
+      return siTypescript.path;
+    },
+    javascriptIconPath(): string {
+      return siJavascript.path;
+    },
+    reactIconPath(): string {
+      return siReact.path;
+    },
+    phpIconPath(): string {
+      return siPhp.path;
+    },
+  },
   setup() {
     onMounted(async () => {
       await applyTypingEffect('introduction', `Hi, I'm Chris`, 30);
-      await applyTypingEffect('profession', 'Full Stack Developer', 30);
+      await applyTypingEffect('profession', 'Software Engineer', 30);
     });
   },
   data() {
@@ -60,6 +236,24 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.section {
+  scroll-snap-align: start;
+  padding: 2rem 0 1rem 0;
+  border-bottom: 1px solid $primary-color;
+  @media (min-width: 1024px) {
+    height: 100vh;
+    padding: 3rem 0 2rem 0;
+  }
+}
+.introduction {
+  font-size: 3.2rem;
+  font-weight: 700;
+  white-space: normal;
+  width: inherit;
+  @media (max-width: 600px) {
+    font-size: 2.4rem;
+  }
+}
 .profession {
   font-size: 3.2rem;
   font-weight: 700;
@@ -120,5 +314,97 @@ export default defineComponent({
     height: 4rem;
     width: 4rem;
   }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(17rem, 1fr));
+  grid-gap: 3rem;
+  padding: 1rem;
+  @include fade-in(2s, 0.5s);
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 487px;
+}
+.card-image {
+  width: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 17.25rem;
+    display: block;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+.card-body {
+  flex: 1;
+  padding: 1rem;
+  h3 {
+    margin: 0;
+  }
+  a {
+    width: fit-content;
+    color: $primary-color;
+  }
+}
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+.website-link {
+  width: fit-content;
+}
+.wordpress-icon {
+  color: #21759b;
+}
+.wordpress-icon,
+.fontawesome-icon {
+  font-size: 1.5rem;
+}
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 135%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 </style>
